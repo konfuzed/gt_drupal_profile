@@ -8,7 +8,6 @@ dependencies:
     - image.style.large
     - node.type.article
   module:
-    - comment
     - image
     - text
     - user
