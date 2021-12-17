@@ -8,7 +8,6 @@ dependencies:
     - image.style.thumbnail
     - node.type.article
   module:
-    - comment
     - image
     - path
     - text
