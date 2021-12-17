@@ -5,7 +5,7 @@
  * Allows the profile to alter the site configuration form.
  */
 
-function gtsciences_drupal_profile_form_install_configure_form_alter(&$form, $form_state) {
+function gt_drupal_profile_form_install_configure_form_alter(&$form, $form_state) {
   $form['admin_account']['account']['name']['#default_value'] = 'altotus';
   $form['regional_settings']['site_default_country']['#default_value'] = 'US';
   $form['regional_settings']['date_default_timezone']['#default_value'] = 'America/New_York';
