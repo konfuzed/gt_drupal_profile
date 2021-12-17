@@ -5,16 +5,19 @@ version: '1.0-dev'
 core_version_requirement: ^9
 distribution:
   - name: Georgia Tech College of Sciences Profile
-# Modules to install to support the profile.
+
 install:
   - admin_toolbar
   - automated_cron
+  - block
   - block_content
   - breakpoint
+  - ckeditor
   - ckeditor5
   - config
   - contact
   - contextual
+  - datetime
   - dblog
   - dynamic_page_cache
   - editor
@@ -33,8 +36,11 @@ install:
   - link
   - media
   - media_library
+  - menu_link_content
   - menu_ui
+  - node
   - options
+  - page_cache
   - paragraphs
   - path
   - pathauto
@@ -49,16 +55,9 @@ install:
   - twig_tweak
   - views
   - views_ui
-# Required modules
-# Note that any dependencies of the modules listed here will be installed automatically.
-dependencies:
-  - block
-  - node
-  - views
 
-# List any themes that should be installed as part of the profile installation.
-# Note that this will not set any theme as the default theme.
 themes:
+  - claro
   - gin
 
 
