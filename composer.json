@@ -1,0 +1,5 @@
+{
+   "name": "gtsciences-web/gtsciences_drupal_profile",
+  "description": "GT College of Sciences Drupal Install profile",
+  "type": "drupal-profile"
+}
