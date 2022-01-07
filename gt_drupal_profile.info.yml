@@ -57,8 +57,4 @@ install:
   - views_ui
 
 themes:
-  - claro
   - gin
-
-
-
