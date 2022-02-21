@@ -17,10 +17,6 @@
       "type": "composer",
       "url": "https://asset-packagist.org"
     },
-    "gt_drupal_profiles": {
-      "type": "vcs",
-      "url": "https://github.com/konfuzed/gt_drupal_profile.git"
-    },
     "gt_drupal_sso": {
       "type": "vcs",
       "url": "https://github.com/konfuzed/gt_drupal_sso.git"
@@ -98,7 +94,6 @@
     "drupal/views_data_export": "^1.0",
     "drupal/webform": "^6.2@beta",
     "drupal/honeypot": "^2.0",
-    "gtsciences/gt_drupal_profile": "dev-main",
     "gtsciences/gt_drupal_sso": "dev-main",
     "league/commonmark": "^1.6",
     "webflo/drupal-finder": "^1.2"
