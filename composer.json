@@ -1,5 +1,181 @@
 {
-   "name": "gtsciences/gt_drupal_profile",
-  "description": "GT College of Sciences Drupal Install profile",
-  "type": "drupal-profile"
+  "name": "gtsciences/gt_drupal_profile",
+  "description": "GT Sciences Drupal profile, for a more civilized age",
+  "type": "drupal-profile",
+  "license": "GPL-2.0-or-later",
+  "homepage": "https://cos.gatech.edu/",
+  "support": {
+    "docs": "https://www.drupal.org/docs/user_guide/en/index.html",
+    "chat": "https://www.drupal.org/node/314178"
+  },
+  "repositories": {
+    "drupal": {
+      "type": "composer",
+      "url": "https://packages.drupal.org/8"
+    },
+    "assets": {
+      "type": "composer",
+      "url": "https://asset-packagist.org"
+    },
+    "gt_drupal_profiles": {
+      "type": "vcs",
+      "url": "https://github.com/konfuzed/gt_drupal_profile.git"
+    },
+    "gt_drupal_sso": {
+      "type": "vcs",
+      "url": "https://github.com/konfuzed/gt_drupal_sso.git"
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require": {
+    "php": ">=8.0",
+    "composer/installers": "^2.0",
+    "oomphinc/composer-installers-extender": "^2.0",
+    "cweagans/composer-patches": "^1.7",
+    "wikimedia/composer-merge-plugin": "^2.0",
+    "drupal/core-composer-scaffold": "^9.3",
+    "drupal/core-recommended": "^9.3",
+    "drush/drush": "^11.0",
+    "deployer/deployer": "^7.0@rc",
+    "drupal/address": "^1.9",
+    "drupal/admin_toolbar": "^3.1",
+    "drupal/asset_injector": "^2.9",
+    "drupal/better_exposed_filters": "^5.0",
+    "drupal/blazy": "^2.5",
+    "drupal/charts": "^5.0@alpha",
+    "drupal/codemirror_editor": "^1.7",
+    "drupal/config_entity_revisions": "^1.8",
+    "drupal/config_ignore": "^3.0@beta",
+    "drupal/config_import_single": "^1.0",
+    "drupal/config_split": "^2.0@beta",
+    "drupal/crop": "^2.1",
+    "drupal/ctools": "^3.7",
+    "drupal/diff": "^1.0",
+    "drupal/editoria11y": "^1.0",
+    "drupal/embed": "^1.4",
+    "drupal/entity_browser": "^2.5",
+    "drupal/entity_embed": "^1.2",
+    "drupal/encrypt": "^3.0",
+    "drupal/env_variables": "^2.1",
+    "drupal/environment_indicator": "^4.0",
+    "drupal/field_encrypt": "^3.0",
+    "drupal/field_group": "^3.2",
+    "drupal/focal_point": "^1.5",
+    "drupal/group": "^1.4",
+    "drupal/iframe": "^2.12",
+    "drupal/image_effects": "^3.2",
+    "drupal/inline_block_title_automatic": "^1.0",
+    "drupal/key": "^1.15",
+    "drupal/layout_builder_component_attributes": "^2.0",
+    "drupal/layout_builder_modal": "^1.1",
+    "drupal/layout_builder_operation_link": "^1.0",
+    "drupal/layout_builder_restrictions": "^2.11",
+    "drupal/layout_builder_styles": "^1.0@beta",
+    "drupal/lb_direct_add": "^1.2",
+    "drupal/link_checker": "^1.0@beta",
+    "drupal/menu_link_attributes": "^1.2",
+    "drupal/markdown": "^3.0@rc",
+    "drupal/masquerade": "^2.0@beta",
+    "drupal/metatag": "^1.19",
+    "drupal/module_filter": "^3.2",
+    "drupal/oembed_providers": "^2.0",
+    "drupal/pathauto": "^1.8",
+    "drupal/redirect": "^1.7",
+    "drupal/redirect_metrics": "^1.0@rc",
+    "drupal/responsive_image_preload": "^1.0",
+    "drupal/scheduler": "^2.0@alpha",
+    "drupal/simple_sitemap": "^4.1",
+    "drupal/social_media_links": "^2.8",
+    "drupal/sodium": "^2.2",
+    "drupal/svg_image": "^1.15",
+    "drupal/telephone_validation": "^2.3",
+    "drupal/token": "^1.10",
+    "drupal/twig_tweak": "^3.1",
+    "drupal/views_bulk_edit": "^2.6",
+    "drupal/views_bulk_operations": "^4.0",
+    "drupal/views_database_connector": "^1.4",
+    "drupal/views_data_export": "^1.0",
+    "drupal/webform": "^6.2@beta",
+    "drupal/honeypot": "^2.0",
+    "gtsciences/gt_drupal_profile": "dev-main",
+    "gtsciences/gt_drupal_sso": "dev-main",
+    "league/commonmark": "^1.6",
+    "webflo/drupal-finder": "^1.2"
+  },
+  "require-dev": {
+  },
+  "conflict": {
+    "drupal/drupal": "*"
+  },
+  "config": {
+    "sort-packages": true,
+    "allow-plugins": {
+      "composer/installers": true,
+      "cweagans/composer-patches": true,
+      "deployer/deployer": true,
+      "drupal/*": true,
+      "gtsciences/*": true,
+      "oomphinc/composer-installers-extender": true,
+      "wikimedia/composer-merge-plugin": true
+    }
+  },
+  "enable-patching": true,
+  "extra": {
+    "drupal-scaffold": {
+      "locations": {
+        "web-root": "web/"
+      },
+      "file-mapping": {
+        "[web-root]/sites/default/settings.php": {
+          "append": "assets/settings-append.php"
+        }
+      }
+    },
+    "installer-paths": {
+      "web/core": ["type:drupal-core"],
+      "web/profiles/{$name}": ["type:drupal-profile"],
+      "web/libraries/{$name}": [
+        "type:drupal-library",
+        "type:bower-asset",
+        "type:npm-asset"
+      ],
+      "web/modules/contrib/{$name}": ["type:drupal-module"],
+      "web/themes/contrib/{$name}": ["type:drupal-theme"],
+      "drush/Commands/contrib/{$name}": ["type:drupal-drush"],
+      "web/modules/custom/{$name}": ["type:drupal-custom-module"],
+      "web/themes/custom/{$name}": ["type:drupal-custom-theme"]
+    },
+    "merge-plugin": {
+        "require": [
+            "web/modules/contrib/*/composer.json",
+            "web/modules/custom/*/composer.json"
+        ],
+        "recurse": true,
+        "replace": false,
+        "ignore-duplicates": false,
+        "merge-dev": true,
+        "merge-extra": false,
+        "merge-extra-deep": false,
+        "merge-scripts": false
+    },
+    "patches": {
+      "drupal/core": {
+        "Add reusable option to inline block creation": "https://www.drupal.org/files/issues/2021-03-18/reusable_inline_block_creation-2999491-66.patch",
+        "Add block classes for bundle and view mode": "https://www.drupal.org/files/issues/block_content-classes-2830725-2.patch",
+        "[subprofile support] 1356276 - Allow profiles to define a base/parent profile and load them in the correct order / 2914389 - Allow profiles to exclude dependencies of their parent": "https://www.drupal.org/files/issues/2021-11-18/1356276-675.patch"
+      },
+      "drupal/entity_browser": {
+        "Media file lost while duplicating paragraph": "https://www.drupal.org/files/issues/2020-03-25/3104901.patch",
+        "2897855 - Entity browser modal dialog opens by pressing enter in any text field": "https://www.drupal.org/files/issues/2020-10-07/prevent-entity-browser-from-open-on-enter-key-pressed-2897855-17-reroll-with-improvement.patch",
+        "3183414 - Entity browser modal popup does not close on pressing escape key": "https://www.drupal.org/files/issues/2020-11-19/3183414-2.patch"
+      },
+      "drupal/lb_direct_add": {
+        "3157440 - Make first option a label not link": "https://www.drupal.org/files/issues/2020-09-09/make-first-option-a-label-not-link-3157440_3_reroll_updated_against_tag_8.x-1.2.patch"
+      },
+      "drupal/social_media": {
+        "3178056 - Dispatcher error due to Symfony Event class deprecation handling": "https://www.drupal.org/files/issues/2020-11-20/dispatcher_error-3178056-5.patch"
+      }
+    }
+  }
 }
