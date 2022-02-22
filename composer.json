@@ -65,7 +65,7 @@
     "drupal/layout_builder_restrictions": "^2.11",
     "drupal/layout_builder_styles": "^1.0@beta",
     "drupal/lb_direct_add": "^1.2",
-    "drupal/link_checker": "^1.0@beta",
+    "drupal/linkchecker": "^1.0@beta",
     "drupal/menu_link_attributes": "^1.2",
     "drupal/masquerade": "^2.0@beta",
     "drupal/metatag": "^1.19",
