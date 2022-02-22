@@ -13,7 +13,7 @@
       "type": "composer",
       "url": "https://packages.drupal.org/8"
     },
-    "assets": {
+    "asset-packagist": {
       "type": "composer",
       "url": "https://asset-packagist.org"
     },
