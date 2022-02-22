@@ -79,7 +79,8 @@
     "drupal/views_data_export": "^1.0",
     "drupal/webform": "^6.2@beta",
     "drupal/honeypot": "^2.0",
-    "gtsciences/gt_drupal_sso": "dev-main"
+    "gtsciences/gt_drupal_sso": "dev-main",
+    "vlucas/phpdotenv": "^5.4"
   },
   "require-dev": {
   },
@@ -95,6 +96,7 @@
       "drupal/*": true,
       "gtsciences/*": true,
       "oomphinc/composer-installers-extender": true,
+      "vlucas/phpdotenv": true,
       "wikimedia/composer-merge-plugin": true
     }
   },
