@@ -5,6 +5,8 @@
  * https://getcomposer.org/doc/04-schema.md#files
  */
 
+use Dotenv\Dotenv;
+
 /**
  * Load any .env file. See /.env.example.
  *

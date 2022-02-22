@@ -1,3 +1,5 @@
+<?php
+
 /**
  * Load services definition file.
  */
@@ -48,3 +50,4 @@ $databases['default']['default'] = [
 ];
 
 $settings['http_client_config']['headers']['User-Agent'] = $_ENV['HEADER_USER_AGENT='];
+
