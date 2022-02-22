@@ -12,7 +12,6 @@ install:
   - block
   - block_content
   - breakpoint
-  - ckeditor
   - ckeditor5
   - config
   - contact
@@ -26,9 +25,6 @@ install:
   - field_group
   - field_ui
   - file
-  - gin_lb
-  - gin_login
-  - gin_toolbar
   - gt_drupal_sso
   - help
   - history
@@ -57,4 +53,4 @@ install:
   - views_ui
 
 themes:
-  - gin
+  - claro
