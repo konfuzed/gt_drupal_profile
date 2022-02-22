@@ -25,15 +25,6 @@
   "minimum-stability": "dev",
   "prefer-stable": true,
   "require": {
-    "php": ">=8.0",
-    "composer/installers": "^2.0",
-    "oomphinc/composer-installers-extender": "^2.0",
-    "cweagans/composer-patches": "^1.7",
-    "wikimedia/composer-merge-plugin": "^2.0",
-    "drupal/core-composer-scaffold": "^9.3",
-    "drupal/core-recommended": "^9.3",
-    "drush/drush": "^11.0",
-    "deployer/deployer": "^7.0@dist",
     "drupal/address": "^1.10",
     "drupal/admin_toolbar": "^3.1",
     "drupal/asset_injector": "^2.9",
@@ -88,8 +79,7 @@
     "drupal/views_data_export": "^1.0",
     "drupal/webform": "^6.2@beta",
     "drupal/honeypot": "^2.0",
-    "gtsciences/gt_drupal_sso": "dev-main",
-    "webflo/drupal-finder": "^1.2"
+    "gtsciences/gt_drupal_sso": "dev-main"
   },
   "require-dev": {
   },
@@ -108,44 +98,30 @@
       "wikimedia/composer-merge-plugin": true
     }
   },
-  "enable-patching": true,
   "extra": {
     "drupal-scaffold": {
       "locations": {
         "web-root": "web/"
       },
+      "gitignore": false,
       "file-mapping": {
-        "[web-root]/sites/default/settings.php": {
-          "append": "assets/settings-append.php"
+        "[project-root]/.gitattributes": false,
+        "[project-root]/.editorconfig": {
+          "mode": "replace",
+          "path": "assets/editorconfig",
+          "overwrite": true
+        },
+        "[project-root]/sites/default/settings.php": {
+          "mode": "replace",
+          "path": "assets/settings.php",
+          "overwrite": false
         }
       }
     },
-    "installer-paths": {
-      "web/core": ["type:drupal-core"],
-      "web/profiles/{$name}": ["type:drupal-profile"],
-      "web/libraries/{$name}": [
-        "type:drupal-library",
-        "type:bower-asset",
-        "type:npm-asset"
-      ],
-      "web/modules/contrib/{$name}": ["type:drupal-module"],
-      "web/themes/contrib/{$name}": ["type:drupal-theme"],
-      "drush/Commands/contrib/{$name}": ["type:drupal-drush"],
-      "web/modules/custom/{$name}": ["type:drupal-custom-module"],
-      "web/themes/custom/{$name}": ["type:drupal-custom-theme"]
-    },
-    "merge-plugin": {
-        "require": [
-            "web/modules/contrib/*/composer.json",
-            "web/modules/custom/*/composer.json"
-        ],
-        "recurse": true,
-        "replace": false,
-        "ignore-duplicates": false,
-        "merge-dev": true,
-        "merge-extra": false,
-        "merge-extra-deep": false,
-        "merge-scripts": false
+    "enable-patching": true,
+    "composer-exit-on-patch-failure": true,
+    "patchLevel": {
+      "drupal/core": "-p2"
     },
     "patches": {
       "drupal/core": {
