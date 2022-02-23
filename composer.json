@@ -20,6 +20,10 @@
     "gt_drupal_sso": {
       "type": "vcs",
       "url": "https://github.com/konfuzed/gt_drupal_sso.git"
+    },
+    "gt": {
+      "type": "vcs",
+      "url": "https://github.com/konfuzed/gt_drupal_theme.git"
     }
   },
   "minimum-stability": "dev",
@@ -30,8 +34,6 @@
     "drupal/asset_injector": "^2.9",
     "drupal/better_exposed_filters": "^5.0",
     "drupal/blazy": "^2.5",
-    "drupal/charts": "^5.0@alpha",
-    "drupal/codemirror_editor": "^1.7",
     "drupal/config_entity_revisions": "^1.8",
     "drupal/config_ignore": "^3.0@beta",
     "drupal/config_import_single": "^1.0",
@@ -44,7 +46,6 @@
     "drupal/embed": "^1.4",
     "drupal/entity_browser": "^2.5",
     "drupal/entity_embed": "^1.2",
-    "drupal/field_encrypt": "^3.0",
     "drupal/field_group": "^3.2",
     "drupal/focal_point": "^1.5",
     "drupal/group": "^1.4",
@@ -78,12 +79,11 @@
     "drupal/twig_tweak": "^3.1",
     "drupal/views_bulk_edit": "^2.6",
     "drupal/views_bulk_operations": "^4.0",
-    "drupal/views_database_connector": "^1.4",
     "drupal/views_data_export": "^1.1",
     "drupal/webform": "^6.2@beta",
     "drupal/honeypot": "^2.0",
     "gtsciences/gt_drupal_sso": "dev-main",
-    "vlucas/phpdotenv": "^5.4"
+    "gtsciences/gt": "dev-main"
   },
   "require-dev": {
   },

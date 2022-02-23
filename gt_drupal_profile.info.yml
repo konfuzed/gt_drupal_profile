@@ -54,3 +54,4 @@ install:
 
 themes:
   - claro
+  - gt

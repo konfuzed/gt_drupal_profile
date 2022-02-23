@@ -21,7 +21,8 @@ $settings['rebuild_access'] = false;
  *
  * https://www.drupal.org/project/drupal/issues/3091285
  */
-// $settings['skip_permissions_hardening'] = TRUE;
+
+// $settings['skip_permissions_hardening'] = true;
 
 /**
  * If there is a local settings file, include it.
