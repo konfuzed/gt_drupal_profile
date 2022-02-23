@@ -102,6 +102,7 @@
       "cweagans/composer-patches": true,
       "deployer/deployer": true,
       "drupal/*": true,
+      "gt/*": true,
       "gtsciences/*": true,
       "oomphinc/composer-installers-extender": true,
       "vlucas/phpdotenv": true,
