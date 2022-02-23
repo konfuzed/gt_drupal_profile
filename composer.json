@@ -63,6 +63,7 @@
     "drupal/module_filter": "^3.2",
     "drupal/oembed_providers": "^2.0",
     "drupal/pathauto": "^1.8",
+    "drupal/permissions_by_term": "^3.1",
     "drupal/redirect": "^1.7",
     "drupal/redirect_metrics": "^1.0@rc",
     "drupal/scheduler": "^2.0@alpha",

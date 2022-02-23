@@ -28,7 +28,7 @@ $settings['rebuild_access'] = FALSE;
 $local_settings = __DIR__ . "/settings.local.php";
 if (file_exists($local_settings)) {
   include $local_settings;
-
+}
 
 /**
  * Settings from .env at root of project.
@@ -49,5 +49,5 @@ $databases['default']['default'] = [
   'autoload' => 'core/modules/mysql/src/Driver/Database/mysql/',
 ];
 
-$settings['http_client_config']['headers']['User-Agent'] = $_ENV['HEADER_USER_AGENT='];
+$settings['http_client_config']['headers']['User-Agent'] = $_ENV['HEADER_USER_AGENT'];
 
