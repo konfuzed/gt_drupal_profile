@@ -8,28 +8,28 @@
     "docs": "https://www.drupal.org/docs/user_guide/en/index.html",
     "chat": "https://www.drupal.org/node/314178"
   },
-  "repositories": {
-    "drupal": {
+  "repositories": [
+    {
       "type": "composer",
       "url": "https://packages.drupal.org/8"
     },
-    "assets": {
+    {
       "type": "composer",
       "url": "https://asset-packagist.org"
     },
-    "gt_drupal_sso": {
+    {
       "type": "vcs",
       "url": "https://github.com/konfuzed/gt_drupal_sso.git"
     },
-    "gt_drupal_theme": {
+    {
       "type": "vcs",
       "url": "https://github.com/konfuzed/gt_drupal_theme.git"
     },
-    "hg_reader": {
+    {
       "type": "vcs",
       "url": "https://github.gatech.edu/ICWebTeam/hg_reader.git"
     }
-  },
+  ],
   "minimum-stability": "dev",
   "prefer-stable": true,
   "require": {
