@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<ruleset name="super-linter">
+  <description>PHP CodeSniffer configuration for super-linter checking, instead of default PSR12.</description>
+  <!-- Check all files in the current directory and below. -->
+  <file>.</file>
+  <arg name="extensions" value="php,module,inc,install,test,profile,theme,css,info,txt,md,yml"/>
+  <config name="drupal_core_version" value="9"/>
+
+  <rule ref="Generic.Files.LineLength"> <!-- rule to override -->
+    <properties>
+      <property name="lineLimit" value="225"/> <!-- maximum line length -->
+    </properties>
+  </rule>
+
+  <!-- If you have Coder installed locally then you can reference the Drupal
+  standards with relative paths. Otherwise simply use "Drupal" and
+  "DrupalPractice. -->
+  <rule ref="Drupal">
+    <!-- Example how you would disable a rule you are not compliant with yet:
+    <exclude name="Drupal.Commenting.Deprecated"/>
+    -->
+  </rule>
+  <rule ref="DrupalPractice"/>
+
+  <!-- Example how you would disable an external rule you do not like:
+  <rule ref="PEAR.Functions.ValidDefaultValue.NotAtEnd">
+    <severity>0</severity>
+  </rule>
+  -->
+</ruleset>
