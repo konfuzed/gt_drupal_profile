@@ -13,7 +13,7 @@
       "type": "composer",
       "url": "https://packages.drupal.org/8"
     },
-    "asset-packagist": {
+    "assets": {
       "type": "composer",
       "url": "https://asset-packagist.org"
     },
@@ -21,7 +21,7 @@
       "type": "vcs",
       "url": "https://github.com/konfuzed/gt_drupal_sso.git"
     },
-    "gt": {
+    "gt_drupal_theme": {
       "type": "vcs",
       "url": "https://github.com/konfuzed/gt_drupal_theme.git"
     },
@@ -105,7 +105,6 @@
       "gt/*": true,
       "gtsciences/*": true,
       "oomphinc/composer-installers-extender": true,
-      "vlucas/phpdotenv": true,
       "wikimedia/composer-merge-plugin": true
     }
   },
