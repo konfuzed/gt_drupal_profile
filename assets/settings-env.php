@@ -35,7 +35,7 @@ if (file_exists($local_settings)) {
  */
 $settings['trusted_host_patterns'] = [ $_ENV['TRUSTED_HOST_PATTERNS'], ];
 
-$settings['config_sync_directory'] = $app_root . '/config';
+// $settings['config_sync_directory'] = $app_root . '/config';
 
 $databases['default']['default'] = [
   'database' => $_ENV['MYSQL_DATABASE'],
