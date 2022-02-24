@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies: {  }
+id: anonymous
+label: 'Anonymous user'
+weight: -10
+is_admin: false
+permissions:
+  - 'access content'
+  - 'administer display modes'
+  - 'use text format restricted_html'
+  - 'view media'
+  - 'view search api pages'
