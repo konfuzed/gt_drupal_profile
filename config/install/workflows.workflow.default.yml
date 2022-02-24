@@ -2,7 +2,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - node.type.article
     - node.type.page
   module:
     - content_moderation
@@ -97,5 +96,4 @@ type_settings:
   default_moderation_state: draft
   entity_types:
     node:
-      - article
       - page
