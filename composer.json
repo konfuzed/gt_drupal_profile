@@ -1,5 +1,5 @@
 {
-  "name": "gtsciences/gt_drupal_profile",
+  "name": "gtsciences/gt_profile",
   "description": "GT Sciences Drupal profile, for a more civilized age",
   "type": "drupal-profile",
   "license": "GPL-2.0-or-later",
@@ -75,7 +75,7 @@
     "drupal/views_data_export": "^1.1",
     "drupal/webform": "^6.2@beta",
     "drupal/honeypot": "^2.0",
-    "gtsciences/gt_drupal_sso": "^1.0@dev",
+    "gtsciences/gt_sso": "^1.0@dev",
     "gtsciences/gt": "^1.0@dev",
     "gtsciences/hg_reader": "^1.0@dev"
   },
@@ -91,7 +91,6 @@
       "cweagans/composer-patches": true,
       "deployer/deployer": true,
       "drupal/*": true,
-      "gt/*": true,
       "gtsciences/*": true,
       "oomphinc/composer-installers-extender": true,
       "wikimedia/composer-merge-plugin": true

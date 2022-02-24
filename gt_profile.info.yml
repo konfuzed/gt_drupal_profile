@@ -1,0 +1,65 @@
+name: GT
+type: profile
+description: "GT Sciences Drupal 9+ Installation Profile"
+core_version_requirement: ^9 || ^10
+distribution:
+  - name: Georgia Tech College of Sciences Profile
+
+dependencies:
+  # Core
+  - block
+  - breakpoint
+  - block_content
+  - ckeditor5
+  - config
+  - contextual
+  - datetime
+  - editor
+  - image
+  - file
+  - media_library
+  - menu_link_content
+  - menu_ui
+  - node
+  - options
+  - path
+  - search
+  - taxonomy
+  - toolbar
+  - views
+
+install:
+  # Core
+  - automated_cron
+  - dblog
+  - editor
+  - help
+  - history
+  - link
+  - media
+    
+  # Contrib
+  - admin_toolbar
+  - block_content
+  - dynamic_page_cache
+  - embed
+  - entity_embed
+  - field_group
+  - field_ui
+  - page_cache
+  - paragraphs
+  - pathauto
+  - rdf
+  - responsive_image
+  - shortcut
+  - social_media_links
+  - telephone
+  - twig_tweak
+  - views_ui
+  
+  # Custom
+  - gt_sso
+
+themes:
+  - claro
+  - gt
