@@ -57,7 +57,7 @@
     "drupal/migrate_source_csv": "^3.5",
     "drupal/module_filter": "^3.2",
     "drupal/oembed_providers": "^2.0",
-    "drupal/paragraphs": "^1.1",
+    "drupal/paragraphs": "^1.12",
     "drupal/pathauto": "^1.8",
     "drupal/permissions_by_term": "^3.1",
     "drupal/redirect": "^1.7",
