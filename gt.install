@@ -1,0 +1,81 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the gt installation profile.
+ */
+
+use Drupal\user\RoleInterface;
+use Drupal\user\UserInterface;
+use Symfony\Component\Yaml\Yaml;
+use Drupal\block\Entity\Block;
+
+/**
+ * Implements hook_preprocess_install_page().
+ */
+function gt_preprocess_install_page(&$variables) {
+  $variables['#attached']['library'][] = 'gt/gt-installer';
+}
+
+
+function gt_install() {
+  /**
+   * The basics
+   */
+
+  // Set front page to "node".
+  \Drupal::configFactory()
+    ->getEditable('system.site')
+    ->set('page.front', '/node')
+    ->save(true);
+
+  // Only admins can create new users
+  \Drupal::configFactory()
+    ->getEditable('user.settings')
+    ->set('register', UserInterface::REGISTER_ADMINISTRATORS_ONLY)
+    ->save(true);
+
+  // Set the GT 3.x Theme as the Default Theme and the Claro Theme as the Admin Theme
+  \Drupal::configFactory()
+    ->getEditable('system.theme')
+    ->set('admin', 'claro')
+    ->set('default', 'gt')
+    ->save(TRUE);
+  \Drupal::configFactory()
+    ->getEditable('node.settings')
+    ->set('use_admin_theme', true)
+    ->save(true);
+  
+  // Default language
+  \Drupal::configFactory()
+    ->getEditable('system.site')
+    ->set('langcode', 'en')
+    ->save(true);
+  \Drupal::configFactory()
+    ->getEditable('system.site')
+    ->set('default_langcode', 'en')
+    ->save(true);
+
+  // Disable Personal Contact Forms
+  \Drupal::service('config.factory')
+    ->getEditable('contact.settings')
+    ->set('user_default_enabled', 'false')
+    ->save();
+
+  // Permissions for anonymous role
+  $anon_permissions = [
+    'access content',
+    'search content',
+    'view media',
+  ];
+  user_role_grant_permissions(RoleInterface::ANONYMOUS_ID, $anon_permissions);
+
+  // Permissions for authenticated role
+  $auth_perms = [
+    'access content',
+    'search content',
+    'use text format basic_html',
+    'view media',
+  ];
+
+}
