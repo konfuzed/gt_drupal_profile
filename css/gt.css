@@ -1,0 +1,48 @@
+body.install-page {
+    background: #f4eee1;
+}
+.layout-container {
+    border-radius: 0;
+    border: 2px solid #b3a369;
+    box-shadow: 0;
+}
+h1.page-title {
+    color: #bf5700;
+}
+.site-version {
+    display: block;
+}
+.site-version::before {
+    content: "Version: ";
+}
+.button.button--primary {
+    background-color: #bf5700;
+    background-image: none;
+    border: none;
+    border-radius: 0.25rem;
+    transition: background-color .1s ease-in-out;
+}
+.button.button--primary:hover {
+    background-color: #a04400;
+    background-image: none;
+}
+header {
+    background-image: url('../gt-logo-online-white.png');
+    background-size: 200px;
+    background-repeat: no-repeat;
+    background-position-x: calc(35% + 8.7rem);
+    background-position-y: 1.25rem;
+}
+@media (max-width: 48rem) {
+    header {
+        background-image: none;
+    }
+    .layout-container {
+        margin: 0 !important;
+        border: none;
+        padding: 0 20px!important;
+        min-height: calc(100vh - 1.25rem);
+        padding-top: 1.25rem !important;
+        border-radius: 0;
+    }
+}

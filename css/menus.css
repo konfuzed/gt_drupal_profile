@@ -1,0 +1,4 @@
+.menu--main .menu-item a.access-protected {
+  background-color: #bfb37c !important;
+  border: 1px dashed #ccc !important;
+}

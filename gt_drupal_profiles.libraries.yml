@@ -1,0 +1,6 @@
+gt-installer:
+  version: VERSION
+  css:
+    theme:
+      css/gt.css: {}
+
