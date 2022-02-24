@@ -10,18 +10,6 @@
   },
   "repositories": [
     {
-      "type": "vcs",
-      "url": "https://github.com/konfuzed/gt_drupal_sso.git"
-    },
-    {
-      "type": "vcs",
-      "url": "https://github.com/konfuzed/gt_drupal_theme.git"
-    },
-    {
-      "type": "vcs",
-      "url": "https://github.gatech.edu/ICWebTeam/hg_reader.git"
-    },
-    {
       "type": "composer",
       "url": "https://packages.drupal.org/8"
     },
@@ -86,9 +74,9 @@
     "drupal/views_data_export": "^1.1",
     "drupal/webform": "^6.2@beta",
     "drupal/honeypot": "^2.0",
-    "gt/hg_reader": "^2.8",
-    "gtsciences/gt_drupal_sso": "dev-main",
-    "gtsciences/gt": "dev-main"
+    "gtsciences/gt_drupal_sso": "^1.0@dev",
+    "gtsciences/gt": "^1.0@dev",
+    "gtsciences/hg_reader": "^1.0@dev"
   },
   "require-dev": {
   },
