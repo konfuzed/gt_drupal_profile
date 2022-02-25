@@ -158,7 +158,7 @@
     },
     "merge-plugin": {
       "require": [
-        "web/modules/contrib/webform/composer.json",
+        "web/modules/contrib/webform/composer.json"
       ],
       "recurse": true,
       "replace": false,
