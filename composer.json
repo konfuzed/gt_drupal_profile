@@ -70,6 +70,7 @@
     "drupal/telephone_validation": "^2.3",
     "drupal/token": "^1.10",
     "drupal/twig_tweak": "^3.1",
+    "drupal/video_embed_field": "^2.4",
     "drupal/views_bulk_edit": "^2.6",
     "drupal/views_bulk_operations": "^4.0",
     "drupal/views_data_export": "^1.1",
@@ -154,6 +155,18 @@
         }
       },
       "installer-name": "gtsciences"
+    },
+    "merge-plugin": {
+      "require": [
+        "web/modules/contrib/webform/composer.json",
+      ],
+      "recurse": true,
+      "replace": false,
+      "ignore-duplicates": false,
+      "merge-dev": true,
+      "merge-extra": false,
+      "merge-extra-deep": false,
+      "merge-scripts": false
     },
     "enable-patching": true,
     "composer-exit-on-patch-failure": true,
