@@ -31,12 +31,14 @@ dependencies:
 install:
   # Core
   - automated_cron
+  - content_moderation
   - dblog
   - editor
   - help
   - history
   - link
   - media
+  - workflows
     
   # Contrib
   - admin_toolbar
@@ -46,12 +48,12 @@ install:
   - entity_embed
   - field_group
   - field_ui
+  - metatag
   - page_cache
   - paragraphs
   - pathauto
   - rdf
   - responsive_image
-  - shortcut
   - social_media_links
   - telephone
   - twig_tweak
@@ -59,6 +61,7 @@ install:
   
   # Custom
   - gt_sso
+  - hg_reader
 
 themes:
   - claro
