@@ -1,0 +1,44 @@
+gt/sso
+"drupal/cas_attributes": "^2.1"
+
+composer.json
+"drupal/config_entity_revisions": "^2.0",
+"drupal/csv_importer": "^1.14",
+"drupal/encrypt": "^3.0",
+
+// entity embed for CKE5 in progress; media_embed from core should work in CKE5?
+"drupal/entity_embed": "^1.2",
+
+"drupal/field_group": "^3.3",
+"drupal/focal_point": "^1.5",
+"drupal/honeypot": "^2.1",
+"drupal/layout_builder_component_attributes": "^2.1",
+"drupal/layout_builder_modal": "^1.1",
+"drupal/lb_direct_add": "^1.2",
+"drupal/permissions_by_term": "^3.1",
+"drupal/redirect_metrics": "^1.0@rc",
+"drupal/sodium": "^2.2",
+"drupal/telephone_validation": "^2.3",
+"drupal/video_embed_field": "^2.4",
+"drupal/webform": "^6.2@beta",
+
+"merge-plugin": {
+  "require": [
+    "web/modules/contrib/webform/composer.json"
+  ],
+  "recurse": true,
+  "replace": false,
+  "ignore-duplicates": false,
+  "merge-dev": true,
+  "merge-extra": false,
+  "merge-extra-deep": false,
+  "merge-scripts": false
+},
+
+
+"drupal/core": {
+  "Add reusable option to inline block creation": "https://www.drupal.org/files/issues/2021-03-18/reusable_inline",
+  "[subprofile support] 1356276 - Allow profiles to define a base/parent profile and load them in the correct order / 2914389 - Allow profiles to exclude dependencies of their parent": "https://www.drupal.org/files/issues/2021-11-18/1356276-675.patch",
+},
+"drupal/entity_browser": {
+  "Media file lost while duplicating paragraph": "https://www.drupal.org/files/issues/2020-03-25/3104901.patch",
