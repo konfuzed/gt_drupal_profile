@@ -4,6 +4,7 @@
   "type": "drupal-profile",
   "license": "GPL-2.0-or-later",
   "homepage": "https://cos.gatech.edu/",
+  "lifecycle": "experimental",
   "support": {
     "docs": "https://www.drupal.org/docs/user_guide/en/index.html",
     "chat": "https://www.drupal.org/node/314178"
@@ -55,7 +56,6 @@
     "drupal/migrate_source_csv": "^3.5",
     "drupal/module_filter": "^3.2",
     "drupal/oembed_providers": "^2.1",
-    "drupal/paragraphs": "^1.14",
     "drupal/pathauto": "^1.11",
     "drupal/quick_node_clone": "^1.15",
     "drupal/redirect": "^1.8",
@@ -157,6 +157,7 @@
     },
     "patches": {
       "drupal/core": {
+        "Performance regression introduced by container serialization solution": "https://www.drupal.org/files/issues/2022-12-21/3327856-10.0.x-98.patch",
         "Add block classes for bundle and view mode": "https://www.drupal.org/files/issues/block_content-classes-2830725-2.patch"
       },
       "drupal/entity_browser": {
